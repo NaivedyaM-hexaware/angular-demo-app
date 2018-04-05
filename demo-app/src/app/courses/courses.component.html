@@ -1,0 +1,16 @@
+<div>
+   <div *ngIf="courses">
+     <ul style="list-style: none;">
+        <li *ngFor="let course of courses">{{course}}</li>
+      </ul>
+   </div>
+   <div *ngIf="!courses">
+     <span>You do not have any courses listed !!</span>
+    </div>
+ 
+  <button class="btn btn-primary">Submit</button>
+  <div [ngClass]="{
+    'test':isSelected,
+    'test2':!isSelected
+  }">{{isSelected}}</div>
+</div>
