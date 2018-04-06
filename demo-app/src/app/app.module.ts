@@ -13,8 +13,12 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { HttpModule } from '@angular/http';
+import { TestComponent } from './test/test.component';
 
-const appRoutes:Routes=[
+import { UserService } from './user.service';
+import { EventComponent } from './event/event.component';
+
+/*const appRoutes:Routes=[
   {
     path:'dashboard', 
     component: DashboardComponent
@@ -27,7 +31,7 @@ const appRoutes:Routes=[
     path:'login',
     component: CoursesComponent
   }
-]
+]*/
 
 @NgModule({
   declarations: [
@@ -39,15 +43,18 @@ const appRoutes:Routes=[
     LoginComponent,
     HeaderComponent,
     FooterComponent,
-    LoginFormComponent
+    LoginFormComponent,
+    TestComponent,
+    EventComponent
   ],
   imports: [
     BrowserModule,
-    HttpModule,
-    RouterModule.forRoot(appRoutes)
+    HttpModule
+   // RouterModule.forRoot(appRoutes)
   ],
   providers: [
-    CourseService
+    CourseService,
+    UserService
   ],
   bootstrap: [AppComponent]
 })

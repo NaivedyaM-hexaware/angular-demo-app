@@ -1,0 +1,10 @@
+
+  <div>
+    <div *ngIf="users">
+        <span *ngFor="let user of users"> {{user.name}}</span>
+    </div>
+    <div *ngIf="!users">
+      <span>No users present....</span>        
+    </div>
+  </div>
+
