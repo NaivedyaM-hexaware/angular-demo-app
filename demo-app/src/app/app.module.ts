@@ -12,6 +12,7 @@ import { LoginComponent } from './login/login.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { LoginFormComponent } from './login-form/login-form.component';
+import { HttpModule } from '@angular/http';
 
 const appRoutes:Routes=[
   {
@@ -24,7 +25,7 @@ const appRoutes:Routes=[
   },
   {
     path:'login',
-    component: LoginComponent
+    component: CoursesComponent
   }
 ]
 
@@ -42,6 +43,7 @@ const appRoutes:Routes=[
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [

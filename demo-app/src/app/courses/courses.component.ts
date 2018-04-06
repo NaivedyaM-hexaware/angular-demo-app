@@ -9,9 +9,11 @@ import { CourseService } from '../course.service';
 export class CoursesComponent{
 
   courses;
-  isSelected = false;
+  isSelected = true;
   constructor(service: CourseService) {
     this.courses = service.getCourses();
+    console.log('sdsdff');
+    console.log(this.courses);
    }
 
 }
